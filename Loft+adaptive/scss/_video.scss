@@ -1,0 +1,39 @@
+@use 'common' as *;
+
+.container-main-video{
+        background-image: url('/Loft+adaptive/images/IV.png');
+    background-repeat: no-repeat;
+    background-position: 97%, 50%;
+
+    display: flex;
+    justify-content: center;
+    iframe{
+        width: 40vw;
+        height: 50vh;
+        
+    }
+}
+
+// ADAPTIVE===============
+
+@include breakPoint(laptop){
+   .container-main-video{
+
+    iframe{
+        width: 90vw;
+       
+        
+    }
+} 
+}
+
+
+@include breakPoint(phone){
+   .container-main-video{
+
+    iframe{
+        width: 90vw;
+    }
+} 
+}
+

@@ -1,0 +1,73 @@
+@use 'common' as *;
+
+
+
+
+.container-main-facilities {
+    background-image: url('/Loft+adaptive/images/II.png');
+    background-repeat: no-repeat;
+    background-position: 95%, 50%;
+    font-size: $smallFont+5px;
+    line-height: 27;
+    color: $standartColorText;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    padding: 120px 50px;
+    gap: 120px;
+
+    img {
+        width: 80px;
+        height: 80px;
+
+    }
+
+    &-example {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        max-width: 190px;
+
+        p {
+            max-width: 190px;
+            text-align: center;
+            @extend .protect-text;
+        }
+    }
+}
+
+
+
+
+
+@include breakPoint(laptop) {
+    .container-main-facilities {
+        flex-wrap: wrap;
+
+        &-example {
+            min-width: 25%;
+        }
+    }
+
+}
+
+@include breakPoint(phone) {
+    .container-main-facilities {
+        font-size: $smallFont;
+        padding: 90px 25px;
+    gap: 50px;
+        img {
+            width: 60px;
+            height: 60px;
+
+        }
+
+        &-example {
+            min-width: 25%;
+            max-width: 40%;
+            gap: 25px;
+        }
+    }
+
+}

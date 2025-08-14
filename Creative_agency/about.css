@@ -1,0 +1,223 @@
+/* header */
+
+body{
+    margin:0;
+    font-family: "Inter", sans-serif;
+    color: #5F6980;
+    
+}
+body > header{
+    background-color: #111111;
+}
+body > header button {
+    font-size: 20;
+    font-weight: 600;
+    line-height: 32px;
+    color: #111111;
+    background-color: #9DFFB9;
+    border-radius: 25px;
+    padding: 12px 24px;
+    width: 311px;
+    height: 56px;
+    
+}
+h1{
+    
+    width: 100%;
+    font-size:110px;
+    letter-spacing: -5.5px;
+    line-height: 112px;
+    margin-top: 52px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+body > header h4{
+    color: #BDBDBD;
+    font-size: 42px;
+    line-height: 46px;
+    letter-spacing: -2px;
+    font-weight: 600px;
+    width: 849px;
+    margin-top: 24px;
+}
+.container{
+    width: 1280px;
+    margin: 0 auto;
+    border: 1px solid yellow;
+    
+}
+body > nav{
+    background: #9DFFB9;
+}
+.burger-menu-btn{
+    background-image: url(/images2/Union-white1.svg);
+    width: 90px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.header-welcome{
+    padding: 80px;
+    box-sizing: border-box;   
+}
+/* header */ 
+.history {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    
+}
+.history article {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 120px 80px;
+    
+    
+    
+    
+}
+.story {
+    width: 547px;
+    
+    border: 1px blue solid;
+}
+.memories-image {
+    width: 656px;
+    height: 464px;
+    border: 1px orange solid; 
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 25px;
+    
+}
+
+.history article:nth-child(even) .story {
+    order: 1;    
+}
+.founders {
+    background-image: url('/images2/founders.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.founders-desyign {
+    background-image: url('/images2/founders-desyign.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+/* /* main */
+
+/* footer */
+footer {
+    background-color: #111111;
+}
+
+.footer-wrapper {
+    padding: 80px;
+    box-sizing: border-box;
+    background-color: transparent;
+    
+}
+.footer-wrapper button {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    width: 238px;
+    height: 56px;
+    border-radius: 25px;
+    background-color: #9DFFB9;
+    border: none;
+    cursor: pointer;
+}
+.footer-wrapper {
+    height: 495px;
+    padding: 80px;
+    
+}
+.mail-logo {
+    margin-top: 24px;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.mail-logo h2 {
+    width: 486px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 84px;
+    line-height: 89px;
+    letter-spacing: -3.5px;
+    box-sizing: border-box;
+    
+}
+.webs {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    gap: 16px;
+    
+}
+.footer-wrapper a {
+    text-decoration: none;
+    color: white;
+}
+.webs a {
+    width: 36px;
+    height: 36px;
+    text-decoration: none;
+    padding: 9px;
+    border: 1px solid #EAECF0;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.webs img {
+    width: 18px;
+    height: 18px;
+   
+}
+.line-information {
+    height: 110px;
+    margin-top: 56px;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.line-information img {
+    width: 30px;
+    height: 30px;
+}
+
+.line-information a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 24px;
+}
+
+/* footer */

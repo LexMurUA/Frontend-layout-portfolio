@@ -1,0 +1,10 @@
+.about-school{
+    padding: 150px 0;
+    border: 1px solid orange;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #FFFFFF;
+    color: 242121;
+}

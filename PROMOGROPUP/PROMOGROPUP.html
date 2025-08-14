@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Abel";
+        }
+        body{
+            margin: 0 auto;
+            width: 1920px;
+            background-color: #FFFFFF;
+            
+
+        }
+        /* header==================================================== */
+
+        .container{
+            margin: 0 auto;
+            width: 1920px;
+            padding: 0 170px;  
+        }
+        header .container{
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto-fill)
+
+        }
+
+        
+        header .container img{
+            width: 250px;
+            height: 38px;
+            cursor:pointer;
+        }
+        
+        header .container .heads:nth-child(1){
+            padding: 70px 0;
+        }        
+        
+        /* header==================================================== */
+        
+        
+        /* main==================================================== */
+        main .container {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto-fill);
+            background-image: url(/images/Vector2.png),url(/images/Vector.png),url(/images/Vector\ \(1\).png);
+            background-repeat: no-repeat;
+            background-position: 100% 10%, 0% 17%, 0% 17%;
+        }
+        main .container .board .heads:nth-child(1){
+            display: grid;
+            grid-template-columns: 70% 30%;
+            justify-content: flex-start;
+            height: 270px;
+        }
+        main .container .board .heads:nth-child(1) span{         
+            width: 947px;
+            color: #181818;
+            letter-spacing: 3%;
+            font-size: 70px;
+            font-weight:lighter;
+            text-transform: uppercase;
+        }
+        main .container .board .heads:nth-child(1) img{
+            justify-self: center;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        main .container .board .heads:nth-child(2){
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 65% 35%;
+            
+            height: 150px;
+        }
+        main .container .board .heads:nth-child(2) span{
+            justify-self: start;
+            width: 500px;
+            color: #181818;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        main .container .board .heads:nth-child(2) img{
+            width: 150px;
+            height: 150px;
+        }
+
+        main .container .board .heads:nth-child(3){
+            padding: 10px;
+        }
+        button{
+            width: 309px;
+            height: 70px;
+            background-color: #0000FF;
+            color: white;
+            font-size: 27px;
+            pad: 3px;
+            cursor:pointer;
+            font-weight: bold;
+        
+        }
+
+        main .container .board .heads:nth-child(4){
+            padding: 80px 0;
+        }
+        .tropheys {
+            display: grid;
+            grid-template: auto/repeat(5,1fr);
+            justify-items: center;
+            align-items: center;
+        }
+        .tropheys img{
+            min-width: 132px;
+            max-width: 261px;
+            max-height: 117px;
+        }
+
+
+        main .container .team .grid{
+        border: 1px solid yellow;
+        gap: 15px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, auto);
+
+        }
+        
+        .team .grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+        }
+        .team .grid img:nth-child(1){
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+        }
+
+        .team .grid img:nth-child(2){
+            grid-column: 4 / 9;
+            grid-row: 1 / 3;
+        }
+
+        .team .grid img:nth-child(3){
+            grid-column: 9 / 13;
+            grid-row: 1 / 4;
+        }
+
+        .team .grid img:nth-child(4){
+            grid-column: 1 / 9;
+            grid-row: 3 / 7;
+        }
+
+        .team .grid img:nth-child(5){
+            grid-column: 9 / 13;
+            grid-row: 4 / 7;
+        }
+
+        .team .grid img:nth-child(6){
+            grid-column: 1 / 5;
+            grid-row: 7 / 12;
+        }
+
+        .team .grid img:nth-child(7){
+            grid-column: 5 / 13;
+            grid-row: 7 / 12;
+        } */
+        .team .grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team h2 {
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 120%;
+            letter-spacing: 5%;
+            margin-top: 200px;
+        }
+ 
+        /* contacts======================================= */
+        .contacts h2{
+            margin-top: 130px;
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 120%;
+            letter-spacing: 5%;
+            width: 1003px;
+            height: 177px;
+        }
+
+        main .contacts .grid{
+            display: grid;
+            width: 726px;
+            height: 426px;
+
+
+        }
+        input, textarea{
+            border: none;
+        }
+        .contacts input, textarea{
+            border-bottom: 2px solid #9D9D9D;
+            
+            
+            width: 726px;
+            height: 50px;
+            font-size: 16px;
+            color: #9D9D9D;
+            text-indent: 15px
+;
+        }
+        .contacts p{
+            font-size: 14px;
+            font-weight: 300;
+        }
+       
+
+        /* footer============================= */
+    footer .container img:nth-child(1){
+        grid-column: 1/3;
+    }
+    footer .container p:nth-child(5){
+        grid-column: 6/8;
+        grid-column: 7;
+        
+    }
+    footer .grid{
+        padding: 30px 0 70px;
+        display: grid;
+
+            height: 46px;
+            grid-template-columns: repeat(7,1fr);
+            grid-template-rows: 1fr;
+            margin-top: 101px;
+    }
+    footer p{
+        color: #9D9D9D;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    footer p:last-child{
+        color: #181818;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="heads"><img src="/images/Group.png" alt="Group"></div>
+            
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="board">
+                <div class="heads"><span>Ми працюємо як частина вашої команди</span><img src="/images/Ellipse 3.png" alt=""></div>
+                <div class="heads"><span>Ми віримо, що:«Щирий сервіс - це коли робиш не тільки те,що маєш, але ще й те, чого можеш і не робити»</span><img src="/images/Ellipse 4.png" alt=""></div>
+                <div class="heads"><button>Завантажити презентацію</button></div>
+                
+                <div class="heads tropheys">
+                    <div><img src="/images/Group 12.png" alt="tropheysphoto"><span></span></div>
+                    <div><img src="/images/Group 13.png" alt="tropheysphoto"><span></span></div>
+                    <div><img src="/images/Group 14.png" alt="tropheysphoto"><span></span></div>
+                    <div><img src="/images/Group 15.png" alt="tropheysphoto"><span></span></div>
+                    <div><img src="/images/Group 16.png" alt="tropheysphoto"><span></span></div>
+                </div>
+            </div>
+
+            <div class="team">
+                <h2>Команда</h2>
+                <div class="grid">
+                    <img src="/images/Rectangle 35.png" alt="teamPhoto">
+                    <img src="/images/Rectangle 38.png" alt="teamPhoto">
+                    <img src="/images/Rectangle 37.png" alt="teamPhoto">
+                    <img src="/images/Rectangle 36.png" alt="teamPhoto">
+                    <img src="/images/Rectangle 39.png" alt="teamPhoto">
+                    <img src="/images/Rectangle 40.png" alt="teamPhoto">
+                    <img src="/images/Rectangle 41.png" alt="teamPhoto">
+                </div>
+            </div>
+
+            <div class="contacts">
+                <h2>Зробити майбутнє бренду успішним</h2>
+                
+                <div class="grid">
+                    <input id="name" placeholder="Ім'я" type="text">
+                    <input id="email" placeholder="E-mail" type="email">                    
+                    <input id="phone" placeholder="Телефон" type="phone">
+                    <textarea placeholder="Росскажіть про себе" name="" id=""></textarea>
+                    <p><span>
+                        Заповнюючи форму, ви погоджуєтесь на <a href="">обробку персональних даних  («Про персональні дані»)</a> 
+                    </span></p>
+
+                    <button>Відправити запит</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <img src="/images/Group 73.png" alt="all rigts protected">
+                <p>Behance</p>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>3 8095 500 63 40</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+$main_theme_color: #DE742B;
+$main_theme_space: #FCFCFC;
+$main_text_color: black;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+    color:$main_text_color;
+}
+body{
+    border: 1px solid black; 
+}
+.container{
+background-color: $main_theme_color;
+margin: 0 auto;
+width: 100%;
+height: auto;
+position: relative;
+
+}
+@mixin sizeF($widthF, $heightF, $borderR: 25px,$border: 2px solid,$borderCol: $main_text_color,$bacgrCol: $main_theme_space) {
+  width: $widthF;
+  height: $heightF;
+  border-radius: $borderR;
+  border: $border; 
+  border-color: $borderCol;
+  background-color: $bacgrCol;
+}
+
+@mixin titleH2($widthI,$heightI,$photo:url('/images/Про нас.jpg')){
+display: block;
+font-size: 55px;
+text-align: center;
+position: relative;
+@extend .text-one-line;
+
+&::before{
+content: '';
+background-image: $photo;
+background-repeat: no-repeat;
+position: absolute;
+width: $widthI;
+height: $heightI;
+left: 0%;   
+}
+}
+.text-safe {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
+  max-width: 100%;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;            
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

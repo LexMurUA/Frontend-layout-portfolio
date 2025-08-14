@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        body{
+            width: 1920px;
+            margin: 0 auto;
+        }
+        .custom-cursor {
+            cursor: url('/imgaes/Group.png'), auto;
+            }
+
+        .container{
+            width: 1200px;
+            
+            margin: 0 auto;
+            font-size: 24px;
+            
+            
+        }
+        header a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        header .grid{
+
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template: 1fr/repeat(8, 1fr);  
+            
+            width: 100%;
+
+        }
+        header a:nth-child(1){
+            
+            grid-column: 2;
+        }
+
+            
+
+        header{
+            background-image: url(/imgaes/waveheader.png);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1080px;
+            
+        }
+        header .container{            
+            padding-top: 52px;
+
+        }
+        header .basegrid{
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,4fr);
+            justify-items: center;
+
+        }
+
+        .basegrid img:nth-child(1){
+            
+            grid-row: 3;
+        }
+        .basegrid img:nth-child(2){
+            margin-top: 25px;
+            grid-row: 4;
+            align-self: st;
+        }
+        .basegrid img:nth-child(3){
+            grid-row: 6;
+            align-self: end;
+        }
+
+        /* main===================================================================== */
+        
+        /* articles================================================= */
+        main .articles{
+            margin-top: 190px;
+            height: 966px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(5,1fr);
+            gap: 25px;
+            column-gap: 90px;
+            align-items: center;
+            
+        }
+        article{
+            width: 100%;
+            height: 100%;
+            color: #242121;
+            font-size: 14px;
+            letter-spacing: 0.6px;
+            
+        }
+        main .articles h2:first-child{
+            grid-column: 1/3;
+            align-self: center;
+            justify-self: center;
+        }
+        main .articles h2::after{
+            content: "";
+            display: inline-block;
+            width: 48px;
+            height: 85px;
+            margin-left: 10px; 
+            background-image: url('/imgaes/Untitled.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            background-position-y: 80%;
+        }
+        .articles h2{
+            font-size: 48px;
+            text-transform: uppercase;
+            
+        }
+
+        /* advantages========================= */
+        .advantages{
+            background-color: #F8F8F8;
+        }
+        .advantages p{
+            font-size: 14px;
+        }
+        .advantages h2{
+            
+            font-size: 48px;
+        }
+        .advantages h2::after{
+            content: "";
+            display: inline-block;
+            width: 48px;
+            height: 85px;
+            margin-left: 10px; 
+            background-image: url('/imgaes/Untitled.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            background-position-y: 80%;
+        }
+        .advantages h4{
+            font-size: 24px;
+        }
+        main .advantages{
+            height: 953px;
+            margin-top: 200px;
+            display: grid;
+            column-gap: 50px;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+        }
+        main .advantages div {
+
+            width: 100%;
+            height: 100%;
+            
+        }
+        main .advantages h2:first-child{
+            grid-column: 1/4;
+        }
+        main .advantages div:nth-child(6){
+            
+            justify-content: end;
+            padding: 10px;
+            grid-column: 2/4;
+            
+        }
+        main .advantages div:nth-child(5){
+
+            
+            justify-content: center;
+            padding: 10px;
+            
+        }
+        .conditions{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 45px ;
+            
+            
+        }
+        .conditions p{
+            padding: 0 10px;
+            width: 100%;
+            height: 65%;
+            grid-column: 1/3;
+            
+        }
+        .conditions img{
+            width: 50px;
+            height: 50px;
+        }
+        .conditions h4{
+            margin: 0 10PX;
+        }
+
+        /* peaks========================================= */
+        .peaks{
+            height: 850px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(4,212px);
+            column-gap: 50px;
+            align-items: center;
+            
+            
+            
+        }
+        .peaks p{
+            color: #242121;
+            font-size: 14px;
+            /* padding: 15px; */
+        }
+        .peaks h2{
+            margin: 0;
+            align-self: end;
+            justify-self: center;
+            font-size: 48px;
+        }
+        .peaks h2::after{
+            content: "";
+            display: inline-block;
+            width: 48px;
+            height: 85px;
+            margin-left: 10px; 
+            background-image: url('/imgaes/Untitled.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            background-position-y: 80%;
+        }
+        .peaks p:nth-child(2){
+            grid-row: 2;
+            align-self: end;
+        }
+        .peaks p:nth-child(3){
+            grid-row: 3;
+        }
+        .peaks p:nth-child(4){
+            grid-row: 4;
+            align-self: start;
+            
+        }
+
+        .peaks span:nth-child(5){
+            grid-row: -5/-1;
+            background-image: url(/imgaes/Rectangle\ 88.png);
+            background-repeat: no-repeat;
+            width: 960px;
+            height: 850px;
+            position: absolute;
+            left: 50%;   
+        }
+
+        /* gallery======================================== */
+        .gallery{
+            margin-top: 200px;
+        }
+        .gallery h2{
+            margin: 0;
+            align-self: end;
+            justify-self: center;
+            font-size: 48px;
+        }
+        .gallery h2::after{
+            content: "";
+            display: inline-block;
+            width: 48px;
+            height: 85px;
+            margin-left: 10px; 
+            background-image: url('/imgaes/Untitled.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            background-position-y: 80%;
+        }
+        
+        
+        .gallery a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #242121;
+            font-size: 24px;
+            width: 109px;
+            height: 23px;
+            line-height: 18;
+            margin-right: 20px;
+            padding: 20px;
+
+            
+        }
+        .gallery a:hover{
+            color: #00B2A0;
+        }
+        
+        .gallery section{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 40px;
+        }
+        
+        section img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section img:nth-child(1){
+            grid-column: 1/3;
+        }
+        section img:nth-child(6){
+            grid-column: -3/-1;
+        }
+        main .container .gallery nav{
+            height: 300px;
+           
+            
+        }
+        .gallery section button{
+            border: 1px solid #C4C4C4;
+            background-color: inherit;
+            grid-column: -5/-1;
+            width: 350px;
+            height: 70px;
+            align-self: start;
+            justify-self: center;
+            font-size: 24px;
+            letter-spacing: 0.6px;
+            color: #242121;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="grid">
+                <img src="/imgaes/лого.png" alt="">
+                <a href="">Про нас</a>
+                <a href="">Послуги</a>
+                <a href="">Вартість</a>
+                <a href="">Блог</a>
+                <a href="">Команді</a>
+                <a href="">Контакти</a>
+            </nav>
+            <div class="basegrid">
+                <img src="/imgaes/WAWE.png" alt="">
+                <img src="/imgaes/Школа серфінгу на Канарських островах.png" alt="">
+                <img src="/imgaes/Group.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="articles">
+                <h2>ПРО школу, ПРО СЕРФІНГ, ПРО КАНАРИ</h2>
+                <article>Канарські острови не випадково називають європейськими Гавайями – це ідеальне місце для шанувальників серфінгу: стабільний теплий вітер цілий рік, піщані пляжі, кілометри незайманих просторів та прозоре море. А справжньою Меккою для серфінгістів стає Фуертевентура – другий за величиною острів архіпелагу.</article>
+                <article>Саме тут найкраще в Іспанії місце, де можна пройти навчання серфінгу. Крім того, що взимку і восени сюди приходять величезні атлантичні хвилі, Фуертевентура може похвалитися і безліччю мілководних спокійних лагун, які відмінно підходять для навчання серфінгістів-початківців.</article>
+                <article>Серфінг на Канарських островах доступний цілий рік – і хвилі, і слушна погода тут є завжди. Причому хвилю, що підходить за рівнем, зможе знайти і справжній профі, і новачок. Не випадково вважається, що саме це місце найкраще підійде для навчання, тут можливо без труднощів переходити на новий рівень.</article>
+                <article>Перераховуючи переваги, не можна обійти і те, що пляжі Фуертевентури найдовші на Канарах. У результаті неможливо уявити їх переповненими туристами. Ви зіткнетеся тільки з тими, кого, як і вас, цікавитиме одна мета – навчання серфінгу.</article>
+                <article>Поки що ви тільки хочете зрозуміти, що таке серфінг, чи вже випробували всю красу катання на хвилях, але бажаєте підняти свій рівень? Наша школа серфінгу зможе запропонувати навчання для будь-якого рівня підготовки.</article>
+                <article>Чотири години захоплюючих занять на день допоможуть вам впевнено підкорювати хвилі, відчути себе справжнім серфінгістом.</article>
+                <article>Основні переваги нашої російської школи – висока якість викладання та організації занять, безпека (всі наші клієнти застраховані в компанії Allianz), відмінний інвентар та екіпірування (надається на весь курс навчання), у тому числі м'які безпечні дошки для початківців.</article>
+                <article>Спочатку ми визначаємо рівень катання та фізичної підготовки і лише потім складаємо програму підготовки. І можемо запевнити, що після того, як закінчиться навчання, ви не тільки отримаєте масу чудових відчуттів, але й цей рівень підніметься на новий щабель.</article>
+            </div>
+            
+            <div class="advantages">
+                <h2>У ШКОЛІ ВИ ОТРИМАЄТЕ</h2>
+                <div class="conditions"><img src="/imgaes/Group (1).png" alt="icon"><h4>ПРОЖИВАННЯ</h4><p>Наша школа серфінгу знаходиться за 100 м від океанського узбережжя. До послуг гостей відкритий басейн та безкоштовний Wi-Fi. З верхньої тераси відкривається краєвид на океан. Відстань до центру міста 15 хв.</p></div>
+
+                <div class="conditions"><img src="/imgaes/Group (2).png" alt="icon"><h4>ПЕРЕЛІТ І СТРАХУВАННЯ</h4><p>Усі учасники програми застраховані страховою компанією Allianz.Переліт з Тенеріфе до острова Лансароте і назад входить у вартість програми</p></div>
+
+                <div class="conditions"><img src="/imgaes/Group (3).png" alt="icon"><h4>НАВЧАННЯ І ЕКІПІРУВАННЯ</h4><p>Все обладнання та екіпірування відомих виробників та надається на весь курс програми. Тренувальний процес починається з визначення рівня катання</p></div>
+
+                <div>
+                    <img src="/imgaes/Group 1.png" alt="%">
+                    <img src="/imgaes/Group 2.png" alt="%">
+                    <img src="/imgaes/Group 3.png" alt="%">
+                </div>
+
+                <div>
+                    <p>Великою перевагою нашої школи є власна методика навчання. Ми розробили власний стиль навчання серфінгу, що дозволяє новачкам максимально швидко стати на дошку.</p>
+                    <p>Саме наша методика та наші викладачі дозволили нам пройти атестацію Федерації серфінгу Канарських островів – FEDERACIÓN CANARIA DE SURF. Це означає, що наша школа відповідає усім світовим стандартам. Переатестація проводиться щорічно і це дозволяє нам завжди прагнути покращення навчання.</p>
+                </div>
+            </div>
+
+            <div class="peaks">
+                <h2>ПОКОРЯЙ ВЕРШИНИ</h2>
+                <p>Викладачі нашої школи серфінгу серед кращих серферів на Канарських островах. Серед них чемпіон Європи з лонгборду, який з радістю поділиться досвідом як з новачками, так і більш досвідченими серферами.
+                    Усі члени викладацького складу є сертифікованими членами Федерації серфінгу Канарських островів. Деякі з них знають російську мову, що безперечно позиціонує нас як російську школу серфінгу за кордоном!</p>
+                <p>Весь тренерський склад регулярно бере участь у семінарах та курсах підвищення кваліфікації, які проводяться по всьому світу різними відомими серф-клубами та федераціями. Тому в нашій школі серфінгу ви можете бути спокійними: вас навчають найкращі тренери!</p>
+                <p>Методика навчання серфінгу розрахована як на новачків, серферів середнього рівня, так і серферів рівня ТОП. Тренери знаходять підхід до кожного, незважаючи на те, що навчання серфінгу у нашій школі проводиться у групах. Однак, ми пропонуємо персональні уроки серфінгу - тільки ви та тренер!</p>
+                <span></span>
+                
+            </div>
+
+            <div class="gallery">
+                <h2>ГАЛЕРЕЯ</h2>
+                    <nav>
+                    <a href="">все</a>
+                    <a href="">туристи</a>
+                    <a href="">природа</a>
+                    <a href="">профі</a>
+                    </nav>
+                <section>
+                    <img src="/imgaes/Rectangle 89.png" alt="gallery">
+                    <img src="/imgaes/Rectangle 91.png" alt="gallery">
+                    <img src="/imgaes/Rectangle 93.png" alt="gallery">
+                    <img src="/imgaes/Rectangle 94.png" alt="gallery">
+                    <img src="/imgaes/196.png" alt="gallery">
+                    <img src="/imgaes/Rectangle 90.png" alt="gallery">
+                    <button>Показати щє</button>
+                </section>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,136 @@
+@use 'common' as *;
+.container-header{
+            padding-top: 40px;
+    background-image:url(./images/фото.png), url(./images/Polygon\ 2.png);
+    background-repeat: no-repeat;
+    background-position: 90% 60%,100% 0%;
+    height: auto;
+    max-width: 1920px;
+    nav{
+        margin: 0 0 14px 0;
+
+        padding-bottom: 14px;
+        height: 59px;
+        border-bottom: 2px solid $main_theme_space;
+        display: grid;
+        grid-template: 1fr/repeat(10,8fr);
+        justify-items: center;
+        align-items: end;
+        gap: 10px;
+        h4{
+        font-size: 25px;
+        color: $main_theme_color;
+        font-style: normal;
+        font-weight: normal;
+        @extend .text-one-line
+        
+        }
+        h4:nth-child(1){
+            grid-column: 2;
+            
+        }
+        div{
+            grid-column: 9;
+            justify-self: end;
+            gap: 10px;
+        }        
+        img{
+            height: 40px;
+            width: 40px;
+            margin-left: 10px;
+        }
+    }    
+    &-banner{
+        padding-left: 120px;
+        width: 52%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+
+        
+        h1{
+            width: 559px;
+            height: 106px;
+            margin-top: 260px;
+            
+        }
+        p{
+            text-align: end;
+            display: block;
+            width: 875px;
+            height: 195px;
+        }
+        button{
+            align-content: center;
+            padding: 30px 42px;
+            font-size: 35px;
+            margin-top: 65px;
+            margin-bottom: 200px;
+            max-width: 600px;
+            max-height: 150px;
+            border-radius: 15px;
+            background-color: $main_theme_space;
+            border: none;
+            cursor: pointer;
+            @extend .text-one-line
+            
+        }
+        .callback{
+        visibility:hidden;
+        position: fixed; /* <-- фіксація до вікна браузера */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6); /* напівпрозорий фон */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9998; /* високо над усім іншим */
+        &-exit{
+            position: absolute;
+            left: 90%;
+            top: 10%;
+        }
+        &-callform{
+            @include sizeF(550px,593px, 15px,2 solid,black,white);
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            justify-content: center;
+            padding: 120px 44px;
+            h3{
+                font-size: 37px;
+                max-width: 400px;
+            }
+            button{
+                width: 265px;
+                height: 71px;
+                background-color: $main_theme_color;
+                margin: 0;
+                padding: 15px;
+                margin-top: 40px;
+                
+            }
+            input{
+                color: #5C5C5C;
+                width: 465px;
+                height: auto;
+                border: none;
+                border-bottom: 2px solid $main_text_color;
+                padding-bottom: 15px;
+                font-size: 25px;
+            }
+    
+        }      
+        }
+    }
+
+    
+}
+
+

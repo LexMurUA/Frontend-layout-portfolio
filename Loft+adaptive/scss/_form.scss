@@ -1,0 +1,141 @@
+@use 'common' as *;
+
+.container-main-form {
+    background-image: url('/Loft+adaptive/images/city.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 180px 0;
+
+
+    h2 {
+        color: $mainColorText;
+        font-size: $chapterSize;
+        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+        width: 75%;
+
+    }
+
+    &-context {
+        display: flex;
+        width: 75%;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+
+
+        .description {
+
+            font-size: $smallFont;
+            font-family: 'Raleway', sans-serif;
+            line-height: 24px;
+            width: 50%;
+            color: $standartColorText;
+
+
+        }
+
+        .forms {
+
+            width: 50%;
+
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 17vw;
+                height: 7vh;
+                background-color: rgba(121, 121, 121, 0.35);
+            }
+
+            input::placeholder {
+                padding: 3px 5px;
+                color: #BEBEBE;
+                font-size: $smallFont;
+                text-align: center;
+                opacity: 0.9;
+
+            }
+
+            button {
+                background-color: $mainColorText;
+                color: $standartColorText;
+                font-weight: bold;
+                width: 17vw;
+                height: 7vh;
+            }
+
+            p {
+                @extend .protect-text;
+                text-align: end;
+                font-size: 10px;
+                font-family: 'Raleway', sans-serif;
+                color: $standartColorText;
+                width: 17vw;
+                height: 7vh;
+            }
+        }
+    }
+}
+
+
+// ADAPTIVE=============
+
+@include breakPoint(laptop) {
+    .container-main-form {
+        padding: 150px 0;
+        h2 {
+            color: $mainColorText;
+            font-size: 33px;
+        }
+        &-context {
+            .forms {
+                gap: 20px;
+            }
+        }
+    }
+
+}
+
+@include breakPoint(phone) {
+    .container-main-form {
+        padding: 130px 0;
+        h2 {
+            color: $mainColorText;
+            font-size: 30px;
+            min-width: 80vw;
+        }
+        &-context {
+            flex-direction: column;
+            gap: 15px;
+            .description {
+                width: 100%;
+                text-align: center;
+            }
+            .forms {
+                width: 100%;
+                gap: 10px;
+                input {
+                    min-width: 45vw;
+
+                }
+                button{
+                    min-width: 45vw;
+                }
+                p{
+                    min-width: 45vw;
+                }
+            }
+        }
+    }
+
+}

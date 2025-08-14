@@ -1,0 +1,467 @@
+@use 'common' as *;
+
+.container-main{
+    height: auto;
+    max-width: 1920px;
+    background-color: $main_theme_space;
+    &-aboutus{
+        padding: 112px 119px;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+  
+        .title{
+            h2{
+                display: block;
+                font-size: 55px;
+                text-align: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    background-image: url(./images/Про\ нас.jpg);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width: 112px;
+                    height: 31px;
+                    left: 0%;   
+                }
+            }
+           &-grid{
+                margin: 35px auto;
+                max-width: 1388px;
+                height: 897px;
+                display: grid;
+                grid-row-gap: 10px;
+                grid-template: repeat(2,3fr)/repeat(3,1fr);
+                justify-items: center;
+                align-items: center;
+                .figure{
+                    padding: 5px;
+                    align-content: end;
+                    padding-left: 5px;
+                    @include sizeF(409px,408px);
+                    img{
+                    display: block;
+                    justify-self: center;
+                    
+                    }
+                    h3{
+                    padding: 0 10px;
+                    justify-self: center;
+                    align-content: end;
+                    font-weight: normal;
+                    font-size: 37px;   
+                    text-align: center;
+                    margin-bottom: 40px;
+                    display: block;
+                    max-height: 40%;
+                    min-height: 30%;
+                    width: 90%;
+                    @extend .text-safe;
+                    
+                    }
+                }
+            }   
+        }
+        
+
+    }
+    &-directions{
+        padding: 112px 119px;
+        height: auto;
+        width: 100%;
+        background-color: $main_theme_color;
+        background-image: url(./images/фото.png),url(./images/фото.png);
+        background-repeat: no-repeat;
+        background-position: 0% 50%,100%,50%;
+        background-size: auto;
+
+        .title{
+            @include titleH2(255px,31px,url(./images/Напрямки\ роботи.png));
+            &-list{
+            margin-top: 65px;
+            width: 824px;
+            max-height: 796px;
+            justify-self: center; 
+           .liitem{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid $main_text_color;
+            max-height: 80px;
+            gap: 35px;
+            padding: 10px 0 10px 0;
+            span{
+                display: block;
+                min-width: 66px;
+                max-width: 70px;
+                max-height: 70px;
+                min-height: 66px;
+                border: 2px solid $main_text_color;
+                border-radius: 100%;
+                padding: 5px;
+                font-size: 45px;
+                @extend .text-one-line
+
+            }
+            p{
+                text-align: left;
+                font-size: 35px;
+                overflow: hidden;
+                width: 100%;
+                @extend .text-safe
+            }
+
+           }
+           button{
+                margin-top: 76px;
+                width: 312px;
+                height: 71px;
+                background-color: transparent;
+                border-radius: 15px;
+                font-size: 30px;
+                cursor: pointer;
+                @extend .text-one-line
+            }
+            .liitem:first-child{
+                border-top: 2px solid $main_text_color;
+            }
+            }
+        }
+
+    }
+    &-teaching{
+        padding: 112px 119px;
+        height: auto;
+        max-width: 100%;
+        background-color: $main_theme_space;
+        .title{
+            position: relative;
+            color: transparent;
+            @include titleH2(139px,31px,url(./images/Навчання.png));
+        &-courses{
+            margin-top: 70px;
+            display: grid;
+            column-gap: 100px;
+            grid-template: repeat(3,400px)/repeat(3,1fr);
+            align-items: start;
+            justify-items: center;
+            img{
+                grid-column: 2/4;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            h2{
+                grid-column: 1/4;
+                align-self: center;
+            }
+            
+            .coursesitem{
+                &-inf{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    margin-top: 30px;
+                    padding: 15px;
+                    
+                }
+                @include sizeF(100%,auto,25px,2px solid,transparent);
+                span{
+                    text-align: center;
+                    justify-self: center;
+                    display: block;
+                    width: 70px;
+                    height: 70px;
+                    border: 2px solid $main_text_color;
+                    border-radius: 100%;
+                    padding: 5px;
+                    font-size: 45px;
+                    padding: 5px;
+                    @extend .text-one-line;
+                }
+                p{
+                    display: block;
+                    text-align: left;
+                    font-size: 35px;
+                    @extend .text-safe;
+                }
+                
+                &-forms{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    
+                    div{
+                        display: flex;
+                        span{
+                        display: block;
+                        width: 70px;
+                        height: 70px;
+                        border: 2px solid $main_text_color;
+                        border-radius: 100%;
+                        padding: 5px;
+                        font-size: 45px;
+                        padding: 5px;
+                        @extend .text-one-line;
+
+                        }
+                        p{
+                            align-self: center;
+                        margin-left: 20px;
+                        display: inline-block;
+                        text-align: left;
+                        font-size: 35px;
+                        overflow: hidden;
+                        width: 70%;
+                        @extend .text-safe;
+                        }
+
+                    }
+                        article{
+                        padding: 5px;
+                        text-align: left;
+                        font-size: 35px;
+                        overflow: hidden;
+                        max-width: 100%;
+                        max-height: 155px;
+                        margin-left: 90px;
+                        overflow-wrap: break-word;
+                        word-break: break-word;
+                        line-height: 1.4;                       
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;              
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                                                }
+                }
+            }
+        }            
+        }
+        h2{
+            display: block;
+            font-size: 55px;
+        }
+
+    }
+    &-travel{
+        padding: 112px 119px;
+        height: auto;
+        max-width: 100%;
+        background-color: $main_theme_space;
+        .title{
+            @include titleH2(215px,31px,url(./images/Наші\ подорожі\ \(1\).png));
+            h2{
+            display: block;
+            font-size: 55px;
+            }
+        &-describe{
+            margin-top: 48px;
+            h3{
+                font-size: 35px;
+                font-weight: normal;
+                @extend .text-one-line;
+            }
+            p{
+            margin-top: 48px;
+            font-size: 35px;
+            font-weight: normal;
+            @extend .text-safe;
+            -webkit-line-clamp: 5;
+            }
+            &-grid{
+                margin-top: 50px;
+                max-height: 1020px;
+
+                display: grid;
+                gap:20px;
+                grid-template: repeat(11,1fr)/repeat(17,1fr);
+                img:nth-child(1){
+                    grid-column: 1/4;
+                    grid-row: 1/6;
+                }
+                img:nth-child(2){
+                    grid-column: 4/12;
+                    grid-row: 1/5;
+                    
+                }
+                img:nth-child(3){
+                    grid-column: 12/18;
+                    grid-row: 1/5;
+                    
+                }
+                img:nth-child(4){
+                    grid-column: 1/4;
+                    grid-row: 6/12;
+                    
+                }
+                img:nth-child(5){
+                    grid-column: 4/10;
+                    grid-row: 5/12;
+                    
+                }
+                img:nth-child(6){
+                    grid-column: 10/18;
+                    grid-row: 5/9;
+                    
+                }
+                img:nth-child(7){
+                    grid-column: 10/13;
+                    grid-row: 9/12;
+                    
+                }
+                img:nth-child(8){
+                    grid-column: 13/18;
+                    grid-row: 9/12;
+                    
+                }
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }            
+        }
+
+    }
+    &-team{
+        padding: 112px 119px;
+        height: auto;
+        max-width: 100%;
+        background-color: $main_theme_color;
+        .title{
+            @include titleH2(209px,31px,url(./images/Наша\ команда.png)); 
+            h2{
+            display: block;
+            font-size: 55px;
+            }
+            &-teachers{
+                margin-top: 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                max-height: 930px;
+                .slider{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+                .slider:nth-child(1){
+                    margin-right: 10px;                    
+                }
+                .slider:nth-child(5){
+                    margin-left: 10px;
+                }
+                .teacher{
+                    img{
+                        width: 100%;
+                        height: 75%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        
+                    }
+                    span{
+                        display: block;
+                        max-height: 10%;
+                        font-size: 35px;
+                        @extend .text-one-line;
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0 5px;
+                        margin: 15px 0;
+                        
+                        display: block;
+                        padding: 0 5px;
+                        height: 20%;
+                        width: 100%;
+                        font-size: 26px;
+                        li{
+                            @extend .text-one-line;
+                            margin-top: 10px
+                        }                       
+                    }
+                    @include sizeF(400px,690px,10px,1px solid,$main_text_color,$main_theme_space);
+                    border: hidden;
+                    &-main{
+                        @include sizeF(476px,928px,10px,1px solid,$main_text_color,$main_theme_space);
+                        @extend .teacher;
+                        border: hidden;
+                    }
+                }               
+            } 
+        }
+    }
+    &-reviews{
+        padding: 112px 119px;
+        height: auto;
+        max-width: 100%;
+        background-color: $main_theme_space;
+        .title{
+            @include titleH2(112px,31px,url(./images/Відгуки.png)); 
+            h2{
+            display: block;
+            font-size: 55px;
+            }
+            &-reviews{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 65px;
+                .slider{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+                &-by-clients{
+                position: relative;
+                border-radius: 15px;
+                background-color: $main_theme_color;
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 48px;
+                padding-bottom: 48px;
+                flex-direction: column;
+                text-align: left;
+                max-width: 1330px;
+                height: auto;
+                padding: 48px 80px;
+                
+                span{
+                    font-size: 50px;
+                    width: 100%;
+                    display: inline-block;
+                    @extend .text-one-line;
+                }
+                span:nth-child(2){
+                    font-size: 45px;
+                    padding-bottom: 15px;     
+                } 
+                span:nth-child(2)::after{
+                    content: '';
+                    background-image: url(./images/Background\ 1.png);
+                    position: absolute;
+                    width: 76px;
+                    height: 107px;
+                    left: 88%;
+                    top: 12%;
+                }             
+                p{
+                    border-top: 1px solid $main_theme_space;
+                    padding-top: 15px;
+                    width: 100%;
+                    display: inline-block;
+                    text-wrap: wrap;
+                    font-size: 40px;
+                    @extend .text-safe
+
+                }
+            }
+
+            }
+
+            
+        }
+    }
+}

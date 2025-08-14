@@ -1,0 +1,61 @@
+@use 'common' as *;
+
+.container-main-map {
+    background-image: url('/Loft+adaptive/images/V.png');
+    background-repeat: no-repeat;
+    background-position: 10%, 50%;
+    padding: 180px 0;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        font-size: $chapterSize;
+        font-weight: bold;
+        color: $mainColorText;
+        font-family: 'Playfair Display', serif;
+        width: 75%;
+    }
+
+    iframe {
+        width: 60vw;
+        height: 50vh;
+
+    }
+}
+
+// ADAPTIVE===============
+
+@include breakPoint(laptop) {
+
+    .container-main-map {
+        padding: 150px 0;
+
+        h2 {
+            font-size: 33px;
+        }
+
+        iframe {
+            width: 90vw;
+
+
+        }
+    }
+}
+
+
+@include breakPoint(phone) {
+
+    .container-main-map {
+        padding: 100px 0;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        iframe {
+            width: 90vw;
+        }
+    }
+}

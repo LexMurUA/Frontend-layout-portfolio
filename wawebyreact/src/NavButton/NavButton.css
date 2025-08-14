@@ -1,0 +1,12 @@
+.navbutton{
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    transition: 1s;
+    color: #FFFFFF;
+}
+.navbutton:hover{
+    border: 2px solid #00B2A0;
+    
+    scale: 1.2;
+}

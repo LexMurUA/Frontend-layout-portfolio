@@ -1,0 +1,131 @@
+@use 'common' as *;
+
+.container-main-questions {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 180px;
+    align-items: center;
+            h2 {
+            width: 75%;
+            color: $mainColorText;
+            font-size: $chapterSize;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+    &-context {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+        gap: 30px;
+
+        input,
+        button,
+        p {
+            width: 15vw;
+
+        }
+
+        input,
+        button {
+            height: 6vh;
+        }
+
+        input {
+            background-color: rgba(121, 121, 121, 0.35);
+
+
+
+        }
+
+        input::placeholder {
+            padding: 3px 5px;
+            color: #BEBEBE;
+            font-size: $smallFont;
+            text-align: center;
+            opacity: 0.9;
+
+        }
+
+        button {
+            background-color: $mainColorText;
+            color: $standartColorText;
+            font-weight: bold;
+        }
+
+        p {
+            @extend .protect-text;
+            text-align: end;
+            font-size: 10px;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 0;
+            color: $standartColorText;
+        }
+    }
+}
+
+// ADAPTIVE===============
+@include breakPoint(laptop) {
+    .container-main-questions {
+   padding-bottom: 150px;
+        flex-direction: column;
+
+        &-description {
+            
+            h2{
+                font-size: 33px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+        }
+
+        &-context {
+            padding-top: 10px;
+            input {
+                min-width: 20vw;
+                @include mobileClick;
+            }
+            button {
+                
+                @include mobileClick;
+            }
+        }
+    }
+}
+
+@include breakPoint(phone) {
+    .container-main-questions {
+        padding-bottom: 125px;
+        gap: 20px;
+        h2 {
+            font-size: 30px;
+            min-width: 80vw;
+            text-align: center;
+        }
+
+        &-context {
+            flex-direction: column;
+            
+            width: 100%;
+            p {
+               min-width: 45vw;
+            }
+
+            input {
+               min-width: 45vw;
+                @include mobileClick;
+            }
+
+            button {
+                min-width: 45vw;
+                @include mobileClick;
+            }
+        }
+
+
+    }
+}
