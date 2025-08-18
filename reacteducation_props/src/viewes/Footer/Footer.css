@@ -1,0 +1,11 @@
+.footer-container{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
