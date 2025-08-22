@@ -1,0 +1,19 @@
+.post-comment {
+      border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 45%;
+    
+}
+
+.post {
+    font-size: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  
+    padding: 10px;
+    background-color: rgba(7, 139, 221, 0.3)
+}
+
+.post h2 {
+    text-align: center;
+}
