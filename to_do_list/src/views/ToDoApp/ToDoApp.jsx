@@ -17,7 +17,7 @@ export const ToDoApp = () => {
   );
 
   const taskValueRef = useRef(null);
-  const emptyControll = useRef(null);
+  
   function buttonShowF() {
     taskValueRef.current.value.length === 0
       ? setButtonShow(false)
@@ -27,7 +27,7 @@ export const ToDoApp = () => {
   // ====================AFTER HOOKS===============================
 
   function addTask() {
-    if (emptyControll.current.value.length === 0) return;
+    if (taskValueRef.current.value.length === 0) return;
     setTasks([
       ...tasks,
       {
@@ -68,7 +68,7 @@ export const ToDoApp = () => {
         onKeyDown={onEnterDown}
       />
       {buttonShow && (
-        <button ref={emptyControll} onClick={addTask}>
+        <button onClick={addTask}>
           Додати завдання
         </button>
       )}
