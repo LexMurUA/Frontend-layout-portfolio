@@ -1,65 +1,19 @@
 import { Task } from "../../components/Task/Task.";
+import { useTo_Do_ListContext } from "../../context/To_Do_ListContext";
 import "./ToDoApp.css";
-import React, { useState, useEffect, useRef } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React from "react";
 
 export const ToDoApp = () => {
-  const [buttonShow, setButtonShow] = useState(false);
-
-  const [tasks, setTasks] = useState(() => {
-    const toDoList = localStorage.getItem("tasks");
-    return toDoList ? JSON.parse(toDoList) : [];
-  });
-
-  useEffect(
-    () => localStorage.setItem("tasks", JSON.stringify(tasks)),
-    [tasks]
-  );
-
-  const taskValueRef = useRef(null);
-  
-  function buttonShowF() {
-    taskValueRef.current.value.length === 0
-      ? setButtonShow(false)
-      : setButtonShow(true);
-  }
-
-  // ====================AFTER HOOKS===============================
-
-  function addTask() {
-    if (taskValueRef.current.value.length === 0) return;
-    setTasks([
-      ...tasks,
-      {
-        id: uuidv4(),
-        taskText: taskValueRef.current.value,
-        status: false,
-        date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString(),
-      },
-    ]);
-    taskValueRef.current.value = "";
-    setButtonShow(false);
-  }
-  function onEnterDown(e) {
-    e.key === "Enter" ? addTask() : e.key;
-  }
-
-  function deleteTask(id) {
-    setTasks(tasks.filter((task) => task.id != id));
-  }
-
-  function changeCheckBox(id) {
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, status: !task.status } : task
-      )
-    );
-  }
+  const { tasks, addTask, buttonShowF, buttonShow, taskValueRef, onEnterDown } =
+    useTo_Do_ListContext();
 
   return (
     <div className="to-do-app">
       <h1>Створіть завдання</h1>
+      <h2>
+        Дата та час: {new Date().toLocaleDateString()}{" "}
+        {new Date().toLocaleTimeString()}
+      </h2>
       <input
         onChange={buttonShowF}
         ref={taskValueRef}
@@ -67,11 +21,7 @@ export const ToDoApp = () => {
         placeholder="Ваше завдання..."
         onKeyDown={onEnterDown}
       />
-      {buttonShow && (
-        <button onClick={addTask}>
-          Додати завдання
-        </button>
-      )}
+      {buttonShow && <button onClick={addTask}>Додати завдання</button>}
 
       <div className="list">
         <p>
@@ -79,15 +29,7 @@ export const ToDoApp = () => {
           {tasks.filter((task) => !task.status).length}
         </p>
         {tasks.map((task) => (
-          <React.Fragment key={task.id}>
-            <Task
-              tasks={tasks}
-              {...task}
-              deleteTask={deleteTask}
-              changeCheckBox={changeCheckBox}
-              setTasks={setTasks}
-            />
-          </React.Fragment>
+          <Task key={task.id} {...task} />
         ))}
       </div>
     </div>

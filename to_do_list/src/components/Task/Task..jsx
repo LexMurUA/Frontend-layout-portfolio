@@ -2,18 +2,12 @@ import "./Task.css";
 import pen from "../../images/pen.svg";
 import trash from "../../images/trash.svg";
 import { useState, useRef } from "react";
+import { useTo_Do_ListContext } from "../../context/To_Do_ListContext";
 
-export const Task = ({
-  tasks,
-  id,
-  taskText,
-  status,
-  date,
-  time,
-  deleteTask,
-  changeCheckBox,
-  setTasks,
-}) => {
+export const Task = ({ id, taskText, status, date, time }) => {
+  const { tasks, deleteTask, changeCheckBox, setTasks } =
+    useTo_Do_ListContext();
+
   const [change, setChange] = useState(false);
   const [changedTask, setChangedTask] = useState(true);
 
@@ -23,10 +17,16 @@ export const Task = ({
   }
 
   function changeAlreadyExist(id) {
+    if (changedValue.current.value.length === 0) return;
     setTasks(
       tasks.map((task) =>
         task.id === id
-          ? { ...task, taskText: changedValue.current.value }
+          ? {
+              ...task,
+              taskText: changedValue.current.value.trim(),
+              date: new Date().toLocaleDateString(),
+              time: new Date().toLocaleTimeString(),
+            }
           : task
       )
     );
@@ -61,6 +61,7 @@ export const Task = ({
             onKeyDown={onEnterDown}
             type="text"
             placeholder="Введіть змніу"
+            defaultValue={taskText}
           />
           <button onClick={() => changeAlreadyExist(id)}>Змінити</button>
         </>
