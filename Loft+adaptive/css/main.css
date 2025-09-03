@@ -41,13 +41,13 @@ body {
 }
 
 .container-grid {
-  background-image: url("/images/headerphoto.jpg");
+  background-image: url("/Loft+adaptive/images/headerphoto.jpg");
   background-size: cover;
   background-position: center;
   display: grid;
   grid-template: repeat(6, 1fr)/repeat(6, 1fr);
   background-repeat: no-repeat;
-  cursor: url("/images/mouse.svg") 10 5, auto;
+  cursor: url("/Loft+adaptive/images/mouse.svg") 10 5, auto;
 }
 .container-grid .burger-menu {
   display: none;
@@ -267,7 +267,7 @@ body {
   }
 }
 .container-main-facilities {
-  background-image: url("/images/II.png");
+  background-image: url("/Loft+adaptive/images/II.png");
   background-repeat: no-repeat;
   background-position: 95%, 50%;
   font-size: 20px;
@@ -320,7 +320,7 @@ body {
   }
 }
 .container-main-flats {
-  background-image: url("/images/III.png");
+  background-image: url("/Loft+adaptive/images/III.png");
   background-repeat: no-repeat;
   background-position: 2%, 2%;
   display: flex;
@@ -356,16 +356,16 @@ body {
   color: #FFFFFF;
 }
 .container-main-flats-examples span:nth-child(1) {
-  background-image: url("/images/01.jpg");
+  background-image: url("/Loft+adaptive/images/01.jpg");
 }
 .container-main-flats-examples span:nth-child(2) {
-  background-image: url("/images/02.jpg");
+  background-image: url("/Loft+adaptive/images/02.jpg");
 }
 .container-main-flats-examples span:nth-child(3) {
-  background-image: url("/images/03.jpg");
+  background-image: url("/Loft+adaptive/images/03.jpg");
 }
 .container-main-flats-examples span:nth-child(4) {
-  background-image: url("/images/04.jpg");
+  background-image: url("/Loft+adaptive/images/04.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -404,7 +404,7 @@ body {
   }
 }
 .container-main-form {
-  background-image: url("/images/city.jpg");
+  background-image: url("/Loft+adaptive/images/city.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -521,7 +521,7 @@ body {
   }
 }
 .container-main-video {
-  background-image: url("/images/IV.png");
+  background-image: url("/Loft+adaptive/images/IV.png");
   background-repeat: no-repeat;
   background-position: 97%, 50%;
   display: flex;
@@ -543,7 +543,7 @@ body {
   }
 }
 .container-main-map {
-  background-image: url("/images/V.png");
+  background-image: url("/Loft+adaptive/images/V.png");
   background-repeat: no-repeat;
   background-position: 10%, 50%;
   padding: 180px 0;
